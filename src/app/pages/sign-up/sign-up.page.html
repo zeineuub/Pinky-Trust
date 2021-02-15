@@ -1,0 +1,85 @@
+<ion-header>
+  <div class="header">
+      <ion-buttons  style="margin-top: 20px;margin-left: 5px;" slot="start">
+        <ion-back-button style="color:white" defaultHref="/auth"></ion-back-button>
+      </ion-buttons>
+  </div>
+  </ion-header>
+  
+  <div class="background">
+    <ion-avatar class="avatar">
+      <img  src="assets/images/avatar.svg">
+    </ion-avatar>
+  </div>
+   
+    <div class="content">
+        <form #f="ngForm" class="form ion-padding" (ngSubmit)="registerUser(f)">
+          <ion-item >
+            <ion-label class="labelInput"  position="floating">LastName *</ion-label>
+              <ion-input name="firstname" 
+                        #firstname="ngModel"
+                        type="text"
+                        ngModel
+                        required>
+            </ion-input>
+            </ion-item>
+            <ion-item *ngIf="!firstname.valid && firstname.touched" lines="none">
+              <ion-label  color="danger">
+                Shouldn't be empty
+              </ion-label>
+            </ion-item>
+            <ion-item >
+              <ion-label class="labelInput" position="floating">FirstName*</ion-label>
+              <ion-input  name="lastname"  
+                          type="text" 
+                          ngModel 
+                          #lastname="ngModel" 
+                          required >
+              </ion-input>
+            </ion-item>
+  
+            <ion-item >
+              <ion-label class="labelInput" position="floating">Adresse email *</ion-label>
+              <ion-input  type="email" 
+                          name="email"
+                          ngModel 
+                          #email="ngModel" 
+                          required>
+              </ion-input>
+            </ion-item>
+            <ion-item *ngIf="!lastname.valid && lastname.touched" lines="none">
+              <ion-label  color="danger">
+                Shouldn't be empty
+              </ion-label>
+            </ion-item>
+            <ion-item *ngIf="!validEmail(email)  && email.touched  " lines="none">
+              <ion-label  color="danger">
+                  Should be a valid email address
+              </ion-label>
+            </ion-item>
+            <ion-item >
+              <ion-label  class="labelInput" position="floating">Mot de passe</ion-label>
+              <ion-input  name="pwd" 
+                          type="password" 
+                          minlength="8" 
+                          ngModel  
+                          #pwd="ngModel" 
+                          required>
+              </ion-input>
+            </ion-item>
+            <ion-item *ngIf="!pwd.valid && pwd.touched" lines="none">
+              <ion-label  color="danger">
+                Should at least be 8 characters long.
+              </ion-label>
+            </ion-item>     
+            <ion-button [disabled]="!f.valid" type="submit" color="warning" class="btn-submit ">Inscrivez-vous</ion-button>
+        
+            <p style="margin-top:30px" class="text">Vous possédez un compte ? <a class="link"
+                (click)="signIn()">Connectez-vous</a></p>
+        </form>
+    </div>
+  
+  
+    
+          
+  

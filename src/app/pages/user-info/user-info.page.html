@@ -1,0 +1,67 @@
+<ion-header>
+  <div class="header">
+      <ion-buttons  style="margin-top: 20px;margin-left: 5px;" slot="start">
+        <ion-back-button style="color:white" defaultHref="/home"></ion-back-button>
+      </ion-buttons>
+  </div>
+  </ion-header>
+  <div class="background">
+    <ion-avatar class="avatar">
+      <img  src="assets/images/avatar.svg">
+    </ion-avatar>
+  </div>
+
+  <div class="content">
+
+    <form class="form ion-padding" (ngSubmit)="submit(form)" #form="ngForm">
+                <ion-item >
+                  <ion-label class="labelInput"  position="floating">FirstName</ion-label>
+                    <ion-input name="firstname" 
+                      type="text"
+                      ngModel
+                      required
+                      #firstname="ngModel">
+                    </ion-input>
+                  
+                </ion-item>
+                
+                  <ion-label *ngIf="!firstname.valid && firstname.touched" class="labelAlert" color="danger">
+                    Shouldn't be empty
+                  </ion-label>
+                
+              
+                <ion-item >
+                  <ion-label class="labelInput"  position="floating">LastName</ion-label>
+                    <ion-input name="lastname" 
+                      type="text"
+                      ngModel
+                      required
+                      #lastname="ngModel">
+                    </ion-input>
+                  
+                </ion-item>
+                
+                  <ion-label  *ngIf="!lastname.valid && lastname.touched" class="labelAlert" color="danger">
+                    Shouldn't be empty
+                  </ion-label>
+               
+                <ion-item >
+                  <ion-label class="labelInput"  position="floating">Email</ion-label>
+                    <ion-input name="email" 
+                      type="text"
+                      ngModel
+                      required
+                      #email="ngModel">
+                    </ion-input>
+                </ion-item>
+                <ion-label class="labelAlert" color="danger" *ngIf="!email.valid && email.touched" lines="none">
+                    Should be a valid email address.
+                </ion-label>
+                  
+                <ion-button [disabled]=" !form.valid" type="submit" color="warning" class="btn-submit " >Save</ion-button>
+
+            </form>
+ 
+ </div>
+
+   

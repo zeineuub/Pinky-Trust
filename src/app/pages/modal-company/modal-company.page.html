@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar >
+    <ion-title>{{companyDetails.namecompany}}</ion-title>
+      <ion-buttons slot="end">
+          <ion-button (click)="dismiss()">
+            <img style="width:20px;display:block;float: right;" src="assets/images/cancel.svg"/>
+          </ion-button>
+      </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card color="transparent">
+    <img [src]="companyDetails.imageUrl" />
+    <ion-card-header>
+      <ion-card-title style="color:#FF8800;font-family: coiny;  font-size:35px;">{{companyDetails.namecompany}}</ion-card-title>
+    </ion-card-header>
+  
+    <ion-card-content style="color:black">
+     {{companyDetails.description}}
+    </ion-card-content>
+  </ion-card>
+</ion-content>

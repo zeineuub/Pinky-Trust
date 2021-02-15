@@ -1,0 +1,37 @@
+<ion-header>
+  <div class="header">
+      <ion-buttons  style="margin-top: 20px;margin-left: 5px;" slot="start">
+        <ion-back-button style="color:#FFC800;" defaultHref="/welcome"></ion-back-button>
+      </ion-buttons>
+  </div>
+  </ion-header>
+  <div class="logo">
+    <img  src="assets/images/company-sign-in.svg" alt="">
+  </div>
+  <form #f="ngForm" (ngSubmit)="loginCompany(f.value.email,f.value.pwd)" class="form ion-padding">
+    <ion-item>
+      <ion-label class="labelInput" position="floating" >Adresse email </ion-label>
+      <ion-input  type="email" name="email" #email="ngModel" ngModel required></ion-input>
+    </ion-item>
+    <ion-item *ngIf="!email.valid && email.touched" lines="none">
+      <ion-label  color="danger">
+        Should be a valid email address.
+      </ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label class="labelInput" position="floating">Mot de passe</ion-label>
+      <ion-input  type="password" name="pwd" ngModel required #pwd="ngModel" minlength="8"></ion-input>
+    </ion-item>
+    <ion-item *ngIf="!pwd.valid && pwd.touched" lines="none">
+      <ion-label  color="danger">
+        Should at least be 8 characters long.
+      </ion-label>
+    </ion-item>
+    
+      <a class="link right" >Forget password ?</a>
+    
+
+      <ion-button [disabled]="!f.valid" type="submit" color="warning" class="btn-submit ">Connect</ion-button>
+      <p style="margin-top:30px" class="text">You have an account ? <a class="link"
+        (click)="signUpCompany()">Sign-up</a></p>
+  </form>

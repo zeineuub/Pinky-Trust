@@ -1,0 +1,19 @@
+.menu{
+    margin-left:10px;
+    margin-top: 10px;
+    width:30px;
+  }
+  .container{
+      margin-top:135px;
+      height: 100%;
+      background: url('./../../../assets/icon/wave.png') contain;
+      .labelInput{
+        color:#FFC800;
+        font-weight: 300;
+      }
+      
+  }
+  ion-header{
+    background: #FFFFFF;
+    box-shadow: 0px 6px 30px rgba(0, 0, 0, 0.08);
+}

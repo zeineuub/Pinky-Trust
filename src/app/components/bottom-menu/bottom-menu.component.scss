@@ -1,0 +1,128 @@
+// .sc-ion-buttons-md-h.ion-color.sc-ion-buttons-md-s .button,
+//  .ion-color .sc-ion-buttons-md-h.sc-ion-buttons-md-s .button{
+	
+// 		--color: #FF820E;
+	
+
+// }
+// .tabbar {
+// 	justify-content: center;
+// }
+  
+// .tab-button {
+// 	max-width: 200px;
+// }
+  
+// ::ng-deep ion-icon.icon-button {
+// 	background: white!important;
+// 	color: #FF820E;
+// 	border-radius: 50%!important;
+// }
+// ion-tab-button{
+// 	--background: #FF820E;
+	
+// } 
+// :host ::ng-deep .tabs-inner {
+// 	position: unset!important;
+// 	contain: size style!important;
+// }
+  
+// .bottom-tab-bar {
+// 	--background: transparent;
+// 	--border: 0;
+// 	// border-radius: 100px;
+
+// }
+  
+
+  
+// .button-center {
+// 	--background: transparent!important;
+// 	.img{
+// 	  height: 50px;
+// 	  width: 50px;
+// 	  font-size: 75px;
+
+// 	}
+// }
+
+// label{
+// 	color:white;
+// }
+// ion-tab-bar {
+	
+// 	&:before {
+// 	  box-shadow: 0 200px 0 300px #FF820E;
+// 	  position: absolute;
+// 	  margin-top: -115px;
+// 	  padding: 56px;
+// 	 border-radius: 40px;
+// 	  content: '';
+
+// 	}
+	
+// }
+  
+// .inner-left-btn {
+// 	border-radius: 0 39% 0 0; // create the curved style on the left side of the center
+// }
+  
+// .inner-right-btn {
+// 	border-radius: 39% 0 0 0; // create the curved style on the right side of the center
+// }
+  
+// .inner-center-btn {
+// 	position: absolute;
+// 	left: calc(50% - 35px); // position your button in the center
+// 	bottom: 20px; // position your button slightly above the half bezel
+// 	font-size: 70px;
+// 	--background: transparent;
+// 	height: 80px;
+// 	width: 80px;
+// }
+ion-tabs{
+	ion-fab {
+		margin-bottom: env(safe-area-inset-bottom); /* fix notch ios*/
+		ion-fab-button {
+			--box-shadow: none;
+		}
+	}
+	ion-tab-bar {
+		--border: 0;
+		--background: transparent;
+		position: absolute;
+		bottom: 0;
+		left:0; right: 0;
+		width: 100%;
+		&:after{
+			content: " ";
+			width: 100%;
+			bottom: 0;
+			background: var(--ion-color-light);
+			height: env(safe-area-inset-bottom);
+			position: absolute;
+		}
+		ion-tab-button {
+			--background: #FF820E;
+			color: wheat;
+		}
+		
+		ion-tab-button.comments {
+			margin-right: 0px;
+			border-top-right-radius: 18px;
+		}
+		ion-tab-button.notifs {
+			margin-left: 0px;
+			border-top-left-radius: 18px;
+		}
+		svg {    
+			width: 72px;
+			margin-top: 19px;
+			color: aliceblue;
+			path{
+				fill: #FF820E;
+			}		
+		}
+		
+	}
+}

@@ -1,0 +1,30 @@
+<ion-header >
+  <ion-toolbar color="white">
+    <img class="menu" src="assets/images/menu.svg" (click)="openMenu()">
+  </ion-toolbar>
+  <div class="header">
+    <p class="title">News</p>
+    <img class="image" src="assets/images/newsHeader.svg" />
+  </div>
+</ion-header>
+
+  <ion-content > 
+    <div data-aos="zoom-in" 
+         data-aos-duration="1500" 
+         class="cardbox"  
+         *ngFor="let article of news.articles">
+        <ion-card style="background-color: #fff59d;">
+        <img [src]="article.urlToImage"/>
+        <ion-card-header>
+          <ion-card-title style="color:#ff6d00">{{article.title}}</ion-card-title>
+        </ion-card-header>
+        <ion-card-content  style="color:#37474f">{{article.content}}</ion-card-content>
+        <a target="_blanck"  [href]="article.url" >
+          <ion-button style="color:#ff8f00"  fill="clear" >
+            <ion-icon style="color:#ff8f00" name="chevron-forward-circle"></ion-icon>
+            Read More
+          </ion-button>
+        </a>
+      </ion-card>
+    </div>
+  </ion-content>

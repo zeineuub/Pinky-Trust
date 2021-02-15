@@ -1,0 +1,91 @@
+.background{
+    position: absolute;
+    width:100%;
+    height:200px;
+    left: 0px;
+    top: 0px;
+    background: #FFC800;
+    .avatar {
+      width: 100px;
+          height: 100px;
+      border-radius: 50%;
+      margin: 95px auto 10px;
+      background-position: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #FFC800;
+      
+    }
+  }
+  .content{
+    margin-top:135px;
+      height: 100%;
+      background: #FFFFFF;
+  
+      .form {
+        display: flex;
+        flex-direction: column;
+        .labelInput{
+            color:#FFC800;
+            font-weight: 300;
+            margin-top:20px;
+        }
+        ion-item { 
+            --background: white;
+            color:black;
+            
+        }
+        .text {
+          font-size: 13px;
+          text-align: center;
+          letter-spacing: 0.84px;
+          color: black;
+        }
+        .link {
+            font-size: 13px;
+            letter-spacing: 0.84px;
+            color:#E1800E;
+  
+        }
+  
+        .agreement {
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+          margin-top:50px;
+          align-self: center;
+          .checkbox {
+            margin-right: 10px;
+  
+          }
+          ion-checkbox{
+              border:3px solid #E1800E;
+            
+              .checkbox-icon{
+                background: white;
+              }
+          }
+          .label {
+            font-size: 14px;
+            color:black;
+          }
+        }
+       
+        .btn-submit {
+          width: 100%;
+          height: 46px;
+          margin-top: 30px;
+          align-self: center;
+          background: #FFC800;
+          border-radius: 43px;
+          font-weight: 500;
+          font-size: 20px;
+          line-height: 23px;
+          text-align: center;
+          color: #FFFFFF;
+        }
+  
+      }
+  }
+  

@@ -1,0 +1,36 @@
+
+<div class="background">
+  <div class="bg"></div>
+</div>
+<div class="content">
+  <div class="logo">
+    <img src="assets/images/logoAuth.svg" alt="" class="logo-img">
+  </div>
+  <div class="welcome">
+    <img src="assets/images/arrow1.svg" alt="" class="logo-arrow1">
+    <p >Bienvenue à<br> Pinky</p>
+    <img src="assets/images/arrow2.svg" alt="" class="logo-arrow2">
+  </div>
+
+  <div class="buttons">
+    <button  style="color:white;font-weight: bold;margin-top:10px" type="button" class="facebook-button text" (click)="facebookLogin()">
+      <img src="assets/images/facebook-logo.svg" alt="" class="facebook-button-logo">
+      <p style="margin-top:10px">Continue avec Facebook</p>
+    </button>
+    <button style="color:white;font-weight: bold;" type="button" class="google-button text" (click)="doGoogleLogin()">
+      <img  src="assets/images/google-logo.svg" alt="" class="google-button-logo">
+      <p style="margin-top:10px">Continue avec Google</p>
+    </button>
+  </div>
+
+  <p class="text signup">
+    Vous n'avez pas de compte?
+    <a class="link" (click)="signUp()">inscrivez-vous</a>
+  </p>
+  <p class="text signin">
+    Vous possédez un compte?
+      <a class="link" (click)="signIn()">connectez-vous</a>
+  </p>
+
+  </div>
+

@@ -1,0 +1,51 @@
+<!-- <ion-tabs #myTabBar id='myTabBar' slot="bottom" > 
+  <img class="inner-center-btn" src="assets/images/add.svg" (click)="addIntership()"/>
+
+  <ion-tab-bar  [translucent]="true" slot="bottom" class="bottom-tab-bar">
+
+    <ion-tab-button tab="home" class="inner-left-btn">
+      <img class="image" src="assets/images/home.svg">
+      <label>Home</label>
+    </ion-tab-button>
+
+    <ion-tab-button tab="add" class="button-center">
+      <div>
+      </div>
+    </ion-tab-button>
+
+    <ion-tab-button tab="list-intership" class="inner-right-btn">
+      <img src="assets/images/find.svg" class="image" alt="">
+      <label>Search</label>
+    </ion-tab-button>
+  </ion-tab-bar>
+</ion-tabs> -->
+<ion-tabs>  
+
+  <ion-fab vertical="bottom" horizontal="center" translucent="true">
+    <ion-fab-button (click)=" addIntership()">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+  
+  <ion-tab-bar slot="bottom" class="ion-no-border">
+    <ion-tab-button tab="list-intership">
+      <ion-icon name="compass"></ion-icon>
+    </ion-tab-button>
+
+    <ion-tab-button tab="home" class="comments">
+      <ion-icon name="home"></ion-icon>
+   
+    </ion-tab-button>
+
+    <svg height="50" viewBox="0 0 100 50" width="100" xmlns="http://www.w3.org/2000/svg"><path d="M100 0v50H0V0c.543 27.153 22.72 49 50 49S99.457 27.153 99.99 0h.01z" fill="red" fill-rule="evenodd"></path></svg>
+
+    <ion-tab-button tab="new" class="notifs">
+      <ion-icon name="notifications"></ion-icon>
+      
+    </ion-tab-button>
+
+    <ion-tab-button [tab]="['user-info/',userId]">
+      <ion-icon name="person"></ion-icon>
+    </ion-tab-button>
+  </ion-tab-bar>
+</ion-tabs>

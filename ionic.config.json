@@ -1,5 +1,7 @@
 {
   "name": "Pinky",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

@@ -1,0 +1,166 @@
+@font-face {
+    font-family: coiny;
+    src: url(./../../../assets/fonts/Coiny-Regular.otf);
+ }
+
+.background{
+    background-color: #FFC800;
+    height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+    bottom: 0;
+    .bg{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 69px;
+
+        background: #FFFFFF;
+        border-radius: 37px;
+    }
+}
+
+.welcome
+{
+    position: absolute;
+    width: 222px;
+    height: 41px;
+    top: 350px;
+    font-family: coiny;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 35px;
+    line-height: 40px;
+    text-align: center;
+
+    color: #FFC800;
+}
+.content {
+	padding: var(--custom-padding-content);
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	position: relative;
+	z-index: 2;
+
+	.logo {
+		margin-top: 40%;
+		display: contents;
+
+		.logo-img {
+			position: absolute;
+            width: 347px;
+            height: 236px;
+            top: 109px;
+		}
+	}
+
+	.text {
+		font-size: 13px;
+		text-align: center;
+        color: black;
+        margin-left: 10px;
+   
+		&.signup {
+            position: absolute;
+            width: 284px;
+            height: 29px;
+            top: 702px;
+            line-height: 15px;
+            margin-top: -10px;
+		}
+
+		&.signin {
+
+			position: absolute;
+            width: 284px;
+            height: 29px;
+            top: 738px;
+            line-height: 15px;
+            margin-top: -10px;
+
+
+		}
+	}
+
+	.link {
+		font-size: 13px;
+        letter-spacing: 0.84px;
+        color:#E1800E;
+
+		&.right {
+			align-self: flex-end;
+		}
+	}
+    .logo-arrow1{
+        position: absolute;
+        margin-left:-160px;
+        top:10px;
+    }
+    .logo-arrow2{
+        margin-left:160px;
+        margin-top:-200px;
+    }
+
+	.buttons {
+        margin-top: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+		justify-content: space-between;
+        width: 100%;
+        
+
+		&>* {
+			margin-top: 10px;
+			flex: 0 0 25%;
+			border: 1px solid;
+			min-height: 50px;
+            font-size: 14px;
+		}
+
+		.google-button {
+			position: absolute;
+            width: 294px;
+            height: 47px;
+            top: 621px;
+            background: #AA2C2C;
+            border-radius: 11px;
+            margin-top:-20px;
+            
+		
+			&-logo {
+                float:left;
+                margin-left:20px;
+                width: 28px;
+                height: 28px;
+                margin-top:10px;
+
+			}
+		  }
+
+		.facebook-button {
+		
+            position: absolute;
+            width: 294px;
+            height: 47px;
+            top: 510px;
+            background: #2C57AA;
+            border-radius: 11px;
+
+		
+			&-logo {
+                float:left;
+                margin-left:20px;
+                width: 24px;
+                height: 24px;
+                margin-top:10px;
+               
+			}
+		}
+
+	}
+}

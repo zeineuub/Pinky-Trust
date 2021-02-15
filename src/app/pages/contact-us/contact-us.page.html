@@ -1,0 +1,37 @@
+<ion-header >
+  <ion-toolbar >
+    <img class="menu" src="assets/images/menu.svg" (click)="openMenu()">
+  </ion-toolbar>
+</ion-header>
+  <div class="container mt-1">
+    <!-- Section heading -->
+    <h3 class="font-weight-bold text-center mb-4">Contact Us</h3>
+    <!-- Section description -->
+    <p class="text-center w-responsive mx-auto pb-5">We are always here for you. So don't hesitate to contact us .<br>We are 24/24h available just for you </p>
+    <ion-card color="transparent">
+      <ion-card-content>
+        <div class="md-form">
+          <i class="fas fa-user prefix text-warning"></i>
+          <input type="text" id="form-name" class="form-control">
+          <label class="labelInput" for="form-name">Nom et Prénom</label>
+        </div>
+        <div class="md-form">
+          <i class="fas fa-envelope prefix text-warning"></i>
+          <input type="text" id="form-email" class="form-control">
+          <label class="labelInput" for="form-email">Email</label>
+          </div>
+          <div class="md-form">
+            <i class="fas fa-pencil-alt prefix text-warning"></i>
+            <textarea id="form-text" class="form-control md-textarea" rows="2"></textarea>
+            <label class="labelInput" for="form-text">Message</label>
+          </div>
+          <div class="text-center">
+            <ion-button style="color:white;" fill="outline" color="warning" expand="block" >Envoyer</ion-button>
+           </div>
+      </ion-card-content>
+    </ion-card>
+
+    </div>
+
+
+

@@ -1,0 +1,37 @@
+<ion-menu side="start"  [menuId]="menuId" contentId="content" >
+  <ion-content>
+    <div class="content">
+
+      <div class="header">
+        <div class="user-info">
+          <div class="initials"></div>
+         <div class="name">{{firstname}}</div>
+          <div class="name">{{lastname}}</div>
+          <div class="name">{{email}}</div> 
+        </div>
+      </div>
+
+      <div class="body">
+        <div class="items">
+          <div class="item" style="margin-bottom: 8%;" (click)="navigate('new')">
+            <img class="img" style="width: auto;" src="assets/images/news.svg" alt="">
+            <div class="item-title">News</div>
+          </div>
+          <div class="item" (click)="navigate('contact-us')">
+            <img class="img" src="assets/images/contact-us.svg" alt="">
+            <div class="item-title">Contact us</div>
+          </div>
+          <div class="item" (click)="navigate('settings')">
+            <img class="img" src="assets/images/setting.svg" alt="">
+            <div class="item-title">Settings</div>
+          </div>
+          <div class="item" (click)="logout()">
+            <img class="img" src="assets/images/logout.svg" alt="">
+            <div class="item-title">Log out</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </ion-content>
+</ion-menu>
